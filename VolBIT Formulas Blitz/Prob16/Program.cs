@@ -13,6 +13,21 @@ namespace Prob16 {
         public Program(string inputFile, string outputFile) {
             io = new IOHelper(inputFile, outputFile, Encoding.Default);
 
+            //reference:http://www.contracosta.edu/legacycontent/math/stararea.htm
+            double n=io.NextDouble(), r=io.NextDouble();
+            double bigAng = (180.0 - 360.0 / n) / 2;
+            bigAng = bigAng / 180.0 * Math.PI;
+            double S_bottom = 2 * r * Math.Cos(bigAng);
+            double height = r * Math.Sin(bigAng);
+            double ans = n * S_bottom * height / 2;
+
+            double smallAng = ((180.0 - 360.0 / n) - 180.0 / n) / 2;
+            smallAng = smallAng / 180.0 * Math.PI;
+            double height_small = Math.Tan(smallAng) * (S_bottom / 2);
+            ans -= n * S_bottom * height_small / 2;
+
+            io.WriteLine(ans, 18);
+
             io.Dispose();
         }
 
