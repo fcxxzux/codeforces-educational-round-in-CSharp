@@ -52,9 +52,8 @@ namespace ProbD {
             string a = io.NextToken(), b = io.NextToken();
             BigInteger tmp = BigInteger.Parse(a);
             tmp -= 1;
-            String.Format("{0:D" + b.Length + "}", tmp);
-            //io.WriteLine(a);
-            //io.WriteLine(calc(b)); io.WriteLine(calc(a));
+            a = tmp.ToString();
+            if (a.Length < b.Length) a = "0" + a;
             long ans = calc(b) - calc(a);
 
             ans %= mod;
