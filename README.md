@@ -17,4 +17,4 @@ Attempt to solve Educational Round #1 ~ #4 in C#
 
 Coming up :
 
-NONE
+[Educational Codeforces Round 9](http://codeforces.com/contests/632) At [Mar/01/2016 23:00(UTC+8)](http://timeanddate.com/worldclock/fixedtime.html?day=1&month=3&year=2016&hour=18&min=0&sec=0&p1=166)
