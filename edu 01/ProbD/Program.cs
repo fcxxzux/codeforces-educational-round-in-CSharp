@@ -10,8 +10,79 @@ namespace ProbD {
     class Program {
         protected IOHelper io;
 
+        struct Point{
+            public int x;
+            public int y;
+            public Point(int _x,int _y){
+                x=_x;
+                y=_y;
+            }
+            public static Point operator +(Point a, Point b) {
+                return new Point(a.x + b.x, a.y + b.y);
+            }
+            public bool inRange(int n,int m){
+                return x < n && y < m && x >= 0 && y >= 0;
+            }
+        }
+        Point[] direction = new Point[] {
+            new Point(-1, 0),
+            new Point(1, 0),
+            new Point(0, 1),
+            new Point(0, -1) 
+        };
+
+        int blocks = 0;
+        List<int> sizeOfEach;
+        int n, m, k;
+        string[] map;
+        int[,] vis;
+
+        int bfs(Point start) {
+            ++blocks;
+            vis[start.x, start.y] = blocks;
+
+            int ans = 0;
+            Queue<Point> q=new Queue<Point>();
+            q.Enqueue(start);
+            while (q.Count > 0) {
+                Point top = q.Dequeue();
+                for (int i = 0; i < 4;i++ ) {
+                    Point tmp = top + direction[i];
+                    if (tmp.inRange(n, m) && map[tmp.x][tmp.y] != '*' && vis[tmp.x,tmp.y] == 0) {
+                        vis[tmp.x, tmp.y] = blocks;
+                        q.Enqueue(tmp);
+                    } else if (tmp.inRange(n, m) && map[tmp.x][tmp.y] == '*') {
+                        ++ans;
+                    }
+                }
+            }
+            return ans;
+        }
+
         public Program(string inputFile, string outputFile) {
             io = new IOHelper(inputFile, outputFile, Encoding.Default);
+
+            sizeOfEach = new List<int>();
+            sizeOfEach.Add(0);
+            n = io.NextInt(); m = io.NextInt(); k = io.NextInt();
+            map = new string[n];
+            foreach (int i in E.Range(0, n)) {
+                map[i] = io.NextToken();
+            }
+            vis = new int[n, m];
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    if (map[i][j]!='*'&&vis[i, j] == 0) {
+                        sizeOfEach.Add(bfs(new Point(i, j)));
+                    }
+                }
+            }
+            for (; k-- > 0; ) {
+                int xi = io.NextInt();
+                int yi = io.NextInt();
+                --xi; --yi;
+                io.WriteLine(sizeOfEach[vis[xi, yi]]);
+            }
 
             io.Dispose();
         }

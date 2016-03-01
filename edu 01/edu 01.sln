@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbA", "ProbA\ProbA.csproj", "{6209702A-D5FE-451D-A184-40211FFD6A6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbB", "ProbB\ProbB.csproj", "{B7774203-7E1A-40B1-BA17-3D6AB20BA0D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbC", "ProbC\ProbC.csproj", "{D2396423-AF5F-4EC5-86B0-CBD77DE7F509}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbD", "ProbD\ProbD.csproj", "{A1F8743F-F4C1-43B0-8A86-93261A8CDEF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +19,18 @@ Global
 		{6209702A-D5FE-451D-A184-40211FFD6A6A}.Debug|x86.Build.0 = Debug|x86
 		{6209702A-D5FE-451D-A184-40211FFD6A6A}.Release|x86.ActiveCfg = Release|x86
 		{6209702A-D5FE-451D-A184-40211FFD6A6A}.Release|x86.Build.0 = Release|x86
+		{B7774203-7E1A-40B1-BA17-3D6AB20BA0D0}.Debug|x86.ActiveCfg = Debug|x86
+		{B7774203-7E1A-40B1-BA17-3D6AB20BA0D0}.Debug|x86.Build.0 = Debug|x86
+		{B7774203-7E1A-40B1-BA17-3D6AB20BA0D0}.Release|x86.ActiveCfg = Release|x86
+		{B7774203-7E1A-40B1-BA17-3D6AB20BA0D0}.Release|x86.Build.0 = Release|x86
+		{D2396423-AF5F-4EC5-86B0-CBD77DE7F509}.Debug|x86.ActiveCfg = Debug|x86
+		{D2396423-AF5F-4EC5-86B0-CBD77DE7F509}.Debug|x86.Build.0 = Debug|x86
+		{D2396423-AF5F-4EC5-86B0-CBD77DE7F509}.Release|x86.ActiveCfg = Release|x86
+		{D2396423-AF5F-4EC5-86B0-CBD77DE7F509}.Release|x86.Build.0 = Release|x86
+		{A1F8743F-F4C1-43B0-8A86-93261A8CDEF7}.Debug|x86.ActiveCfg = Debug|x86
+		{A1F8743F-F4C1-43B0-8A86-93261A8CDEF7}.Debug|x86.Build.0 = Debug|x86
+		{A1F8743F-F4C1-43B0-8A86-93261A8CDEF7}.Release|x86.ActiveCfg = Release|x86
+		{A1F8743F-F4C1-43B0-8A86-93261A8CDEF7}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

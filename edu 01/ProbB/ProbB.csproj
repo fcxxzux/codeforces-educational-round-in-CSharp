@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{81D3D719-DF69-49EB-B450-6D68C3E6B887}</ProjectGuid>
+    <ProjectGuid>{B7774203-7E1A-40B1-BA17-3D6AB20BA0D0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProbB</RootNamespace>

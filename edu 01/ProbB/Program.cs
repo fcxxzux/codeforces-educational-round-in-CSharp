@@ -13,6 +13,22 @@ namespace ProbB {
         public Program(string inputFile, string outputFile) {
             io = new IOHelper(inputFile, outputFile, Encoding.Default);
 
+            List<char> s = io.NextToken().ToList();
+            for (int m = io.NextInt(); m-- > 0; ) {
+                int l = io.NextInt();
+                int r = io.NextInt();
+                int k = io.NextInt();
+                int len = r - l + 1;
+                k %= len;
+                --r; --l;
+
+                s.Reverse(l, len);
+                s.Reverse(l, k);
+                s.Reverse(l+k, len-k);
+            }
+            io.WriteLine(new String(s.ToArray()));
+            
+
             io.Dispose();
         }
 
