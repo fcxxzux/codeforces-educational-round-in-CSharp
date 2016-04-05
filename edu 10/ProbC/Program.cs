@@ -1,21 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using System.Text;
 using System.IO;
 using System.Numerics;
 using E = System.Linq.Enumerable;
 
-namespace ProbE {
+namespace ProbC {
     class Program {
         protected IOHelper io;
 
         public Program(string inputFile, string outputFile) {
             io = new IOHelper(inputFile, outputFile, Encoding.Default);
-            //放弃用位运算优化了，不是很好写，写出来就要是个和C++ bitset差不多的类了
 
-
+            int n=io.NextInt(),m=io.NextInt();
+            int[] d = new int[n + 1];
+            int[] lastShow = new int[n + 1];
+            List<int>[] G = new List<int>[n + 1];
+            for (int i = 1; i <= n; i++) {
+                d[i] = io.NextInt();
+                G[i] = new List<int>();
+            }
+            for (int i = 0; i < m; i++) {
+                int a = io.NextInt(), b = io.NextInt();
+                G[a].Add(b); G[b].Add(a);
+            }
+            long ans = 0;
+            int maxLast = 0;
+            for (int i = 1; i <= n; i++) {
+                foreach (int e in G[d[i]]) {
+                    maxLast = Math.Max(maxLast, lastShow[e]);
+                }
+                ans += i - maxLast;
+                lastShow[d[i]] = i;
+            }
+            io.WriteLine(ans);
             io.Dispose();
         }
 

@@ -1,21 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using System.Text;
 using System.IO;
 using System.Numerics;
 using E = System.Linq.Enumerable;
 
-namespace ProbE {
+namespace ProbB {
     class Program {
         protected IOHelper io;
 
         public Program(string inputFile, string outputFile) {
             io = new IOHelper(inputFile, outputFile, Encoding.Default);
-            //放弃用位运算优化了，不是很好写，写出来就要是个和C++ bitset差不多的类了
 
-
+            int n = io.NextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; ++i) arr[i] = io.NextInt();
+            Array.Sort(arr);
+            List<int> q = new List<int>();
+            int p1 = 0, p2 = n - 1;
+            while (p1 <= p2) {
+                q.Add(arr[p1++]);
+                if (p1 <= p2) q.Add(arr[p2--]);
+            }
+            foreach (int i in q) {
+                io.Write(i + " ");
+            }
             io.Dispose();
         }
 

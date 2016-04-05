@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbA", "ProbA\ProbA.csproj", "{F97B2B83-A8F8-44C4-8C70-FFFAE280C991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbB", "ProbB\ProbB.csproj", "{937C79B8-86B7-41DE-A56C-29718E0ED4E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbD", "ProbD\ProbD.csproj", "{5BA75D99-D14F-45A0-8DA0-2168AB0F376E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbC", "ProbC\ProbC.csproj", "{A850ED08-6933-49BE-8666-B1756AE4A817}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F97B2B83-A8F8-44C4-8C70-FFFAE280C991}.Debug|x86.ActiveCfg = Debug|x86
+		{F97B2B83-A8F8-44C4-8C70-FFFAE280C991}.Debug|x86.Build.0 = Debug|x86
+		{F97B2B83-A8F8-44C4-8C70-FFFAE280C991}.Release|x86.ActiveCfg = Release|x86
+		{F97B2B83-A8F8-44C4-8C70-FFFAE280C991}.Release|x86.Build.0 = Release|x86
+		{937C79B8-86B7-41DE-A56C-29718E0ED4E4}.Debug|x86.ActiveCfg = Debug|x86
+		{937C79B8-86B7-41DE-A56C-29718E0ED4E4}.Debug|x86.Build.0 = Debug|x86
+		{937C79B8-86B7-41DE-A56C-29718E0ED4E4}.Release|x86.ActiveCfg = Release|x86
+		{937C79B8-86B7-41DE-A56C-29718E0ED4E4}.Release|x86.Build.0 = Release|x86
+		{5BA75D99-D14F-45A0-8DA0-2168AB0F376E}.Debug|x86.ActiveCfg = Debug|x86
+		{5BA75D99-D14F-45A0-8DA0-2168AB0F376E}.Debug|x86.Build.0 = Debug|x86
+		{5BA75D99-D14F-45A0-8DA0-2168AB0F376E}.Release|x86.ActiveCfg = Release|x86
+		{5BA75D99-D14F-45A0-8DA0-2168AB0F376E}.Release|x86.Build.0 = Release|x86
+		{A850ED08-6933-49BE-8666-B1756AE4A817}.Debug|x86.ActiveCfg = Debug|x86
+		{A850ED08-6933-49BE-8666-B1756AE4A817}.Debug|x86.Build.0 = Debug|x86
+		{A850ED08-6933-49BE-8666-B1756AE4A817}.Release|x86.ActiveCfg = Release|x86
+		{A850ED08-6933-49BE-8666-B1756AE4A817}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,21 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using System.Text;
 using System.IO;
 using System.Numerics;
 using E = System.Linq.Enumerable;
 
-namespace ProbE {
+namespace ProbA {
     class Program {
         protected IOHelper io;
 
         public Program(string inputFile, string outputFile) {
             io = new IOHelper(inputFile, outputFile, Encoding.Default);
-            //放弃用位运算优化了，不是很好写，写出来就要是个和C++ bitset差不多的类了
 
-
+            int h1 = io.NextInt(), h2 = io.NextInt();
+            int a = io.NextInt(), b = io.NextInt();
+            int days = 0, lastday = h1;
+            while (h1 < h2) {
+                h1 += 8 * a;
+                if (h1 >= h2) break;
+                h1 -= 12 * b;
+                ++days;
+                h1 += 4 * a;
+                if (h1 >= h2) break;
+                if (lastday >= h1) break;
+            }
+            if (lastday >= h1) io.WriteLine(-1);
+            else io.WriteLine(days);
             io.Dispose();
         }
 
